@@ -31,3 +31,4 @@ D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\ob
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\obj\Debug\net8.0\USP.API.pdb
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\obj\Debug\net8.0\USP.API.genruntimeconfig.cache
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\obj\Debug\net8.0\ref\USP.API.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\obj\Debug\net8.0\USP.API.sourcelink.json
