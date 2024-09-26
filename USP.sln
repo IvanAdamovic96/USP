@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USP.Application", "USP.Appl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USP.Infrastructure", "USP.Infrastructure\USP.Infrastructure.csproj", "{130B1F28-DAA7-4142-B332-64DAA47DEBCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USP.Worker", "USP.Worker\USP.Worker.csproj", "{35EBCFFB-2FBB-421B-91BC-659D55B8A1DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{130B1F28-DAA7-4142-B332-64DAA47DEBCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130B1F28-DAA7-4142-B332-64DAA47DEBCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{130B1F28-DAA7-4142-B332-64DAA47DEBCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35EBCFFB-2FBB-421B-91BC-659D55B8A1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EBCFFB-2FBB-421B-91BC-659D55B8A1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EBCFFB-2FBB-421B-91BC-659D55B8A1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EBCFFB-2FBB-421B-91BC-659D55B8A1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

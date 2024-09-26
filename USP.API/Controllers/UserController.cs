@@ -1,18 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using USP.API.Services;
 
 namespace USP.API.Controllers;
 
-public class UserController : ApiBaseController
+public class UserController(IUserService userService, IProductService productService) : ApiBaseController
 {
     [HttpGet]
-    public string GetUser()
-    {
-        return "Ivan";
-    }
+    public async Task<string>GetUser() => (await userService.GetUser());
+    
 
     [HttpPost]
-    public string Create()
+    public async Task<string> Create()
     {
-        return "Ivan created";
+        var result = await userService.CreateUser();
+        await productService.CreateProduct();
+        return result;
     }
 }

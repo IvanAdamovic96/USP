@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\USP.Application.csproj": {}
+    "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj": {}
   },
   "projects": {
-    "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\USP.Application.csproj": {
+    "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\USP.Application.csproj",
-        "projectName": "USP.Application",
-        "projectPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\USP.Application.csproj",
+        "projectUniqueName": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj",
+        "projectName": "USP.Worker",
+        "projectPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\obj\\",
+        "outputPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,9 +45,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MediatR": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[12.4.1, )"
+              "version": "[8.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -62,6 +66,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
