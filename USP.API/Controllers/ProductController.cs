@@ -1,18 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
+using USP.Application.Product.Commands;
+using USP.Application.Product.Queries;
 
 namespace USP.API.Controllers;
 
 public class ProductController : ApiBaseController
 {
     [HttpGet]
-    public string GetProduct()
+    public async Task<string>GetProduct()
     {
-        return "Apple";
+        return await Mediator.Send(new GetOneProductQuery());
     }
 
     [HttpPost]
-    public string ProductAdd()
+    public async Task<string>ProductAdd(CreateProductCommand command)
     {
-        return "Apple added";
+        return await Mediator.Send(command);
     }
 }
+

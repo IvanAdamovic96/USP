@@ -10,8 +10,6 @@
       <Folder Include="Common\Dto\" />
       <Folder Include="Exceptions\" />
       <Folder Include="Extensions\" />
-      <Folder Include="Product\Commands\" />
-      <Folder Include="Product\Queries\" />
       <Folder Include="User\Commands\" />
       <Folder Include="User\Queries\" />
     </ItemGroup>

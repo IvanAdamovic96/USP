@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("USP.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5cacc803c69663e08b88f942e5072368edf90ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b30540ba3aa6573d901161b0401dfaca1cc2af4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("USP.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("USP.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
