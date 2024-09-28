@@ -11,3 +11,6 @@ D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Applic
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\obj\Debug\net8.0\refint\USP.Application.dll
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\obj\Debug\net8.0\USP.Application.pdb
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\obj\Debug\net8.0\ref\USP.Application.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\bin\Debug\net8.0\USP.Domain.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\bin\Debug\net8.0\USP.Domain.pdb
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.Application\obj\Debug\net8.0\USP.Appl.E3B6B53D.Up2Date

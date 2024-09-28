@@ -1,4 +1,5 @@
 using MediatR;
+using MongoDB.Entities;
 
 namespace USP.Application.Product.Commands;
 
@@ -9,7 +10,14 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
 {
     public async Task<string> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
-        //create product 
+        //create product - upis u bazu
+        var entity = new Domain.Entities.Product();
+        entity.Name = request.Name;
+        entity.Description = request.Description;
+        entity.Price = request.Price;
+
+        entity.SaveAsync(cancellation: cancellationToken);
+        
         
         
         return "Product created!";
