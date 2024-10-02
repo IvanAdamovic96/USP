@@ -1,26 +1,23 @@
 using MediatR;
 using MongoDB.Entities;
+using USP.Application.Common.Dto;
+using USP.Application.Common.Mappers;
 
 namespace USP.Application.Product.Commands;
 
-public record CreateProductCommand(string Name, string Description, decimal Price) : IRequest<string>;
+public record CreateProductCommand(ProductCreateDto Product) : IRequest<ProductDetailsDto?>;
 
 
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, string>
+public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductDetailsDto?>
 {
-    public async Task<string> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<ProductDetailsDto?> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
+        var entity = request.Product.FromCreateDtoToEntity();
         //create product - upis u bazu
-        var entity = new Domain.Entities.Product();
-        entity.Name = request.Name;
-        entity.Description = request.Description;
-        entity.Price = request.Price;
 
-        entity.SaveAsync(cancellation: cancellationToken);
+        await entity.SaveAsync(cancellation: cancellationToken);
         
-        
-        
-        return "Product created!";
+        return entity.ToDto();
         //return "Created: " + request.Name + ", Description: " + request.Description + ", Price: " + request.Price;
 
     }

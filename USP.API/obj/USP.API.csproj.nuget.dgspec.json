@@ -132,6 +132,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"
+            },
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [
