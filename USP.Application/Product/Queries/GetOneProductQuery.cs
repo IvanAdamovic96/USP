@@ -8,7 +8,6 @@ namespace USP.Application.Product.Queries;
 public record GetOneProductQuery(string Id) : IRequest<ProductDetailsDto?>;
 
 
-
 public class GetOneProductQueryHandler : IRequestHandler<GetOneProductQuery, ProductDetailsDto?>
 {
     public async Task<ProductDetailsDto?> Handle(GetOneProductQuery request, CancellationToken cancellationToken)

@@ -1,15 +1,18 @@
+using FluentValidation.AspNetCore;
+using USP.API.Filters;
 using USP.API.Services;
 using USP.Application;
 using USP.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>options.Filters.Add<ApiExceptionFilter>());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
 
 //3 nacina
 builder.Services.AddSingleton<IUserService, UserService>();

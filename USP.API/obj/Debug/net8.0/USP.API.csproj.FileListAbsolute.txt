@@ -58,3 +58,6 @@ D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bi
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Infrastructure.pdb
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Domain.pdb
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\FluentValidation.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
