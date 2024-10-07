@@ -1,3 +1,3 @@
 namespace USP.Application.Common.Dto;
 
-public record ProductCreateDto(string Name, string Description, decimal Price);
+public record ProductCreateDto(string Name, string Description, decimal Price, int Category, string UserId);

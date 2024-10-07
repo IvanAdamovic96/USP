@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7BecX5WHwns=",
+  "dgSpecHash": "JlpYq8UyQL4=",
   "success": true,
   "projectFilePath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Application\\USP.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\ardalis.smartenum\\8.1.0\\ardalis.smartenum.8.1.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

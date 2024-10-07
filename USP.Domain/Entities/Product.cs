@@ -1,4 +1,5 @@
 using MongoDB.Entities;
+using USP.Domain.Enums;
 
 namespace USP.Domain.Entities;
 
@@ -8,4 +9,9 @@ public class Product : Entity
     public string Description { get; set; }
     public decimal Price { get; set; }
 
+    public User User { get; set; }
+    
+    public One<User> ReferencedUser { get; set; }
+    public Category Category { get; set; }
+    
 }
