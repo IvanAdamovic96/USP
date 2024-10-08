@@ -1,4 +1,6 @@
 using FluentValidation;
+using USP.Domain.Enums;
+using USP.Domain.Extensions;
 
 namespace USP.Application.Product.Commands;
 
@@ -13,5 +15,10 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
         RuleFor(x => x.Product.Description).MaximumLength(150);
         RuleFor(x => x.Product.Price).GreaterThan(10m);
         RuleFor(x => x.Product.Price).LessThanOrEqualTo(50000m);
+        RuleFor(x => x.Product.Category).NotNull();
+
+        RuleFor(x => x.Product.Category).Must(t => Category.TryFromValue(t, out _)).WithName("CategoryType")
+            .WithMessage($"Category type must be in list of: {EnumExtensions.ValidReportTypeList}");
+
     }
 }

@@ -18,6 +18,14 @@
           "USP.Application.dll": {}
         }
       },
+      "Ardalis.SmartEnum/8.1.0": {
+        "runtime": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        }
+      },
       "AWSSDK.Core/3.7.100.14": {
         "runtime": {
           "lib/netcoreapp3.1/AWSSDK.Core.dll": {
@@ -236,6 +244,7 @@
       },
       "USP.Domain/1.0.0": {
         "dependencies": {
+          "Ardalis.SmartEnum": "8.1.0",
           "MongoDB.Entities": "23.1.1"
         },
         "runtime": {
@@ -252,6 +261,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Ardalis.SmartEnum/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+OpcDNwgfwdKEhEwq6U5lrXiBpdA3LxfZR7nTtF6vzbkXc1hKa2Uv/rHduzxwNLYrzOfR/7QUVyjWTliSS7pOA==",
+      "path": "ardalis.smartenum/8.1.0",
+      "hashPath": "ardalis.smartenum.8.1.0.nupkg.sha512"
     },
     "AWSSDK.Core/3.7.100.14": {
       "type": "package",
