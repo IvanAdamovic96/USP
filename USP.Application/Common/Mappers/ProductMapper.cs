@@ -9,7 +9,10 @@ namespace USP.Application.Common.Mappers;
 [Mapper]
 public static partial class ProductMapper
 {
-    public static partial ProductDetailsDto ToDto(this Domain.Entities.Product product);
+    public static ProductDetailsDto ToDto(this Domain.Entities.Product product)
+    {
+        new ProductDetailsDto(entity.Name, entity.Description, entity.Price, entity.ReferencedUser)
+    }
     
     public static partial Domain.Entities.Product ToEntityCustom(this ProductCreateDto dto);
 
@@ -21,10 +24,14 @@ public static partial class ProductMapper
             Name = dto.Name,
             Description = dto.Description,
             Price = dto.Price,
-            Category = Category.FromValue(dto.Category),
+            //Category = Category.FromValue(dto.Category),
             User = user,
             ReferencedUser = referencedOneToOneUser
         };
+
+        
+        
+        
         return entity;
     }
 }
