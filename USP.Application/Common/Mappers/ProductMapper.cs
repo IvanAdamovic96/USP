@@ -9,12 +9,19 @@ namespace USP.Application.Common.Mappers;
 [Mapper]
 public static partial class ProductMapper
 {
-    public static partial ProductDetailsDto ToDto(this Domain.Entities.Product product);
+    public static async Task<ProductDetailsDto> ToDtoAsync(this Domain.Entities.Product entity)
+    {
+        var userDetails = await entity.ReferencedOneToOneUser.ToEntityAsync();
+        var userDetailsDto = userDetails.ToDto();
+        
+        return new ProductDetailsDto(entity.Name, entity.Description, entity.Price, userDetailsDto,
+            entity.ReferencedOneToManyUser.ToListDto(), entity.ReferencedManyToManyUser.ToListDto());
+    }
     
     public static partial Domain.Entities.Product ToEntityCustom(this ProductCreateDto dto);
 
     
-    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, User user, One<User> referencedOneToOneUser)
+    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, Domain.Entities.User user, One<Domain.Entities.User> referencedOneToOneUser)
     {
         var entity = new Domain.Entities.Product
         {
@@ -23,8 +30,10 @@ public static partial class ProductMapper
             Price = dto.Price,
             Category = Category.FromValue(dto.Category),
             User = user,
-            ReferencedUser = referencedOneToOneUser
+            ReferencedOneToOneUser = referencedOneToOneUser
         };
+        
+        
         return entity;
     }
 }
