@@ -21,7 +21,7 @@ public static partial class ProductMapper
     public static partial Domain.Entities.Product ToEntityCustom(this ProductCreateDto dto);
 
     
-    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, User user, One<User> referencedOneToOneUser)
+    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, Domain.Entities.User user, One<Domain.Entities.User> referencedOneToOneUser)
     {
         var entity = new Domain.Entities.Product
         {
