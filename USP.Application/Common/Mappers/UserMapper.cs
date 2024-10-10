@@ -9,7 +9,7 @@ namespace USP.Application.Common.Mappers;
 public static partial class UserMapper
 {
     public static partial UserDetailsDto ToDto(this User entity);
-    public static partial User ToEntity(this UserDetailsDto entity);
+    public static partial User ToEntity(this UserDetailsDto dto);
 
     public static ListUserDetailsDto ToListDto(this Many<User, Domain.Entities.Product> manyEntity)
     {
