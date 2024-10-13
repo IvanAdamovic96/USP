@@ -62,3 +62,8 @@ D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bi
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\Ardalis.SmartEnum.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Worker.deps.json
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Worker.runtimeconfig.json
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Worker.exe
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Worker.dll
+D:\1. Singidunum\Upravljanje softverskim projektom\Projekat_vezbe\USP\USP.API\bin\Debug\net8.0\USP.Worker.pdb

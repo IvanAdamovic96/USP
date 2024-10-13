@@ -5,7 +5,7 @@ namespace USP.Application.Common.Dto;
 public record ProductDetailsDto(
     string Name, string Description,
     decimal Price,
-    UserDetailsDto ReferencedOneUser,
+    UserDetailsDto ReferencedOneToOneUser,
     ListUserDetailsDto ReferencedOneToManyUser,
     ListUserDetailsDto ReferencedManyToManyUser
     );

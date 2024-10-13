@@ -3,6 +3,8 @@ using USP.Domain.Enums;
 
 namespace USP.Domain.Entities;
 
+
+//Za administratorsku stranu
 public class Product : Entity
 {
     public string Name { get; set; }
@@ -22,7 +24,7 @@ public class Product : Entity
     [OwnerSide]
     public Many<User, Product> ReferencedManyToManyUser { get; set; }
     
-    public Category Category { get; set; }
+    //public Category Category { get; set; }
 
 
     public Product()
@@ -30,4 +32,5 @@ public class Product : Entity
         this.InitOneToMany(() => ReferencedOneToManyUser);
         this.InitManyToMany(() => ReferencedOneToManyUser, user => user.ReferencedManyToManyProducts);
     }
+    
 }

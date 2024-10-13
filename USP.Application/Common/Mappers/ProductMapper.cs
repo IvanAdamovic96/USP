@@ -18,23 +18,43 @@ public static partial class ProductMapper
             entity.ReferencedOneToManyUser.ToListDto(), entity.ReferencedManyToManyUser.ToListDto());
     }
     
-    public static partial Domain.Entities.Product ToEntityCustom(this ProductCreateDto dto);
+    public static ProductCustomDetailsDto ToCustomDto(this Product entity)
+    {
+        return new ProductCustomDetailsDto(entity.Name + " - " + entity.Price);
+    }
+    
+    //public static partial Domain.Entities.Product ToEntityCustom(this ProductCreateDto dto);
 
     
-    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, Domain.Entities.User user, One<Domain.Entities.User> referencedOneToOneUser)
+    public static Domain.Entities.Product ToEntityFromCreateDto(this ProductCreateDto dto, User user, One<User> referencedOneToOneUser)
     {
         var entity = new Domain.Entities.Product
         {
             Name = dto.Name,
             Description = dto.Description,
             Price = dto.Price,
-            Category = Category.FromValue(dto.Category),
+            //Category = Category.FromValue(dto.Category),
             User = user,
             ReferencedOneToOneUser = referencedOneToOneUser
         };
         
         
         return entity;
+    }
+
+
+    public static async Task<ProductEmbedded> ToEmbedded(this Product entity)
+    {
+        return new ProductEmbedded
+        {
+            Name = entity.Name,
+            Description = entity.Description,
+            Price = entity.Price,
+            User = entity.User,
+            ReferencedOneToOneUser = await entity.ReferencedOneToOneUser.ToEntityAsync(),
+            ReferencedOneToManyUser = entity.ReferencedOneToManyUser.ToListEntity(),
+            ReferencedManyToManyUser = entity.ReferencedManyToManyUser.ToListEntity()
+        };
     }
 }
 

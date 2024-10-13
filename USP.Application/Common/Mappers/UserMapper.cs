@@ -36,5 +36,17 @@ public static partial class UserMapper
         return new ListUserDetailsDto(listDto);
     }
     
+    public static List<User> ToListEntity(this Many<User, Domain.Entities.Product> manyEntity)
+    {
+        var list = new List<User>();
+
+        foreach (var entity in manyEntity )
+        {
+            list.Add(entity);
+        }
+
+        return list;
+    }
+    
     
 }

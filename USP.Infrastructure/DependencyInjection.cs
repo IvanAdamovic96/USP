@@ -2,6 +2,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using MongoDB.Entities;
+using USP.Application.Common.Interfaces;
+using USP.Infrastructure.Services;
 
 namespace USP.Infrastructure;
 
@@ -18,6 +20,7 @@ public static class DependencyInjection
         .GetAwaiter()
         .GetResult();
         
+        service.AddSingleton<IProductService, ProductService>();
         
         return service;
     }

@@ -650,6 +650,24 @@
         "runtime": {
           "bin/placeholder/USP.Infrastructure.dll": {}
         }
+      },
+      "USP.Worker/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "8.0.8",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "USP.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/USP.Worker.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/USP.Worker.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -1828,6 +1846,11 @@
       "type": "project",
       "path": "../USP.Infrastructure/USP.Infrastructure.csproj",
       "msbuildProject": "../USP.Infrastructure/USP.Infrastructure.csproj"
+    },
+    "USP.Worker/1.0.0": {
+      "type": "project",
+      "path": "../USP.Worker/USP.Worker.csproj",
+      "msbuildProject": "../USP.Worker/USP.Worker.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1835,7 +1858,8 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "USP.Application >= 1.0.0",
-      "USP.Infrastructure >= 1.0.0"
+      "USP.Infrastructure >= 1.0.0",
+      "USP.Worker >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1870,6 +1894,9 @@
             },
             "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Infrastructure\\USP.Infrastructure.csproj": {
               "projectPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Infrastructure\\USP.Infrastructure.csproj"
+            },
+            "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj": {
+              "projectPath": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj"
             }
           }
         }

@@ -3,6 +3,7 @@ using USP.API.Filters;
 using USP.API.Services;
 using USP.Application;
 using USP.Infrastructure;
+using USP.Worker;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,8 +20,8 @@ builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IProductService, ProductService>();
 //builder.Services.AddTransient<IUserService, UserService>();
 //builder.Services.AddScoped<IUserService, UserService>();
-
-
+builder.Services.AddHostedService<NotifyUserWorker>();
+builder.Services.AddHostedService<UpdateProductEmbeddedWorker>();
 
 
 var app = builder.Build();
