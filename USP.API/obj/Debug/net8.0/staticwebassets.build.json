@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "Mhspq9DyLtVQQrw2m+MTeIr/E7k7DFIUnYf7LRdaSbA=",
+  "Hash": "5PJw5vRP1mL3/ZhIBM6VhHH59tIXgsPtaMeOzPNKa+w=",
   "Source": "USP.API",
   "BasePath": "_content/USP.API",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\1. Singidunum\\Upravljanje softverskim projektom\\Projekat_vezbe\\USP\\USP.Worker\\USP.Worker.csproj",
+      "Version": 2,
+      "Source": "USP.Worker",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }
