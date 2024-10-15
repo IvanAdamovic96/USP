@@ -13,10 +13,7 @@ public static class DependencyInjection
     {
         var conn = configuration.GetSection("MongoDbConfiguration");
         
-        Task.Run(async () =>
-        {
-            await DB.InitAsync(conn.GetSection("DbName").Value!, MongoClientSettings.FromConnectionString(conn.GetSection("DbString").Value));
-        })
+        Task.Run(async () => await DB.InitAsync(conn.GetSection("DbName").Value!, MongoClientSettings.FromConnectionString(conn.GetSection("DbString").Value)))
         .GetAwaiter()
         .GetResult();
         
