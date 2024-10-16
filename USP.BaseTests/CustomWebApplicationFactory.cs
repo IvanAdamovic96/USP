@@ -17,7 +17,8 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
         {
             await DB.InitAsync("UspBazaTestiranje",
                 MongoClientSettings.FromConnectionString(
-                    "mongodb+srv://ivanadamovic21:pAzxV64OEpPFoRnW@cluster-usp.tc6wi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-usp"));
+                    "mongodb+srv://ivanadamovic21:pAzxV64OEpPFoRnW@cluster-usp.tc6wi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-usp&connectTimeoutMS=60000&socketTimeoutMS=60000"));
+
         })
         .GetAwaiter()
         .GetResult();
