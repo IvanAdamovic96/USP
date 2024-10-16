@@ -3,24 +3,25 @@ using USP.API.Filters;
 using USP.API.Services;
 using USP.Application;
 using USP.Infrastructure;
+using USP.Worker;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(options =>options.Filters.Add<ApiExceptionFilter>());
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddFluentValidationClientsideAdapters();
 
 //3 nacina
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IProductService, ProductService>();
 //builder.Services.AddTransient<IUserService, UserService>();
 //builder.Services.AddScoped<IUserService, UserService>();
-
-
+builder.Services.AddHostedService<NotifyUserWorker>();
+builder.Services.AddHostedService<UpdateProductEmbeddedWorker>();
 
 
 var app = builder.Build();
@@ -37,3 +38,9 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program
+{
+    
+}
