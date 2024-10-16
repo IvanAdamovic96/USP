@@ -1,5 +1,3 @@
-using MediatR;
-
 namespace USP.Application.Common.Dto;
 
 public record ProductDetailsDto(

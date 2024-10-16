@@ -14,6 +14,6 @@ public class ProductController : ApiBaseController
     public async Task<ActionResult>GetAll() => Ok(await Mediator.Send(new GetAllProductQuery()));
     
     [HttpPost]
-    public async Task<ActionResult>ProductAdd(CreateProductCommand command) => Ok(await Mediator.Send(command));
+    public async Task<ActionResult>Create(CreateProductCommand command) => Ok(await Mediator.Send(command));
 }
 

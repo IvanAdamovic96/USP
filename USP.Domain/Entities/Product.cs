@@ -30,7 +30,7 @@ public class Product : Entity
     public Product()
     {
         this.InitOneToMany(() => ReferencedOneToManyUser);
-        this.InitManyToMany(() => ReferencedOneToManyUser, user => user.ReferencedManyToManyProducts);
+        this.InitManyToMany(() => ReferencedManyToManyUser, user => user.ReferencedManyToManyProducts);
     }
     
 }

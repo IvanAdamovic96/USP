@@ -7,5 +7,8 @@ namespace USP.API.Controllers;
 public class ApiBaseController :ControllerBase
 {
     private ISender? _mediator;
-    protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetRequiredService<ISender>();
+    protected ISender Mediator
+    {
+        get { return _mediator ??= HttpContext.RequestServices.GetRequiredService<ISender>(); }
+    }
 }

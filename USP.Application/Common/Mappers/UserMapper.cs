@@ -17,7 +17,7 @@ public static partial class UserMapper
         {
             ID = (string.IsNullOrEmpty(dto.ID) ? null : dto.ID) ?? string.Empty,
             FirstName = dto.FirstName,
-            LastName = dto.FirstName,
+            LastName = dto.LastName,
             Email = dto.Email
         };
     }
